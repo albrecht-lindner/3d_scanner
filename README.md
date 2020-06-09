@@ -1,7 +1,7 @@
 # 3d_scanner
 This project proposes a 3d scanner under $40. The scanner uses a smartphone and a line laser module to create colored point clouds.
 
-The left  image shows the scanning setup mounted on a tripod and the right image shows the corresponding video frame captured by the smartphone. The horizontal disparity shift of the laser line in the frame is related to the septh of the scene points.
+The left  image shows the scanning setup mounted on a tripod and the right image shows the corresponding video frame captured by the smartphone. The horizontal disparity shift of the laser line in the frame is related to the depth of the scene points.
 <table style="width:100%">
     <tr>
       <th>setup</th>
@@ -15,4 +15,4 @@ The left  image shows the scanning setup mounted on a tripod and the right image
 
 <br>
 The scanner rotates 360 degrees around the tripod axis (which coincides with the smartphone camera's optical center). The recorded video can be converted into a full color 3d point cloud:
-<img src="https://github.com/albrecht-lindner/3d_scanner/blob/master/output/anim3d.gif" width="300">
+<img src="https://github.com/albrecht-lindner/3d_scanner/blob/master/output/anim3d.gif" width="100%">
