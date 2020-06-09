@@ -1,0 +1,26 @@
+BOM
+2 x 8x22x7 Miniature Ball Bearings
+26 x M6 nuts
+1 x 1/4-20 nut
+1 x M8 nut
+1 x M8 screw
+6 x M6 screws
+1 x Line laser module can be purchased at aliexpress.com for approximately $15 to $25 depending on optical power
+1 x Power source for laser module
+1 x Tripod with 1/4-20 mount
+
+3d printing
+Print all 4 STLs once. Use generic PLA with approximately 30% infill for added stability.
+
+Stop the printing process at the appropriate layer height to insert nuts into the pieces:
+platform: 26 x M6 nuts
+tripodMount: 1 x 1/4-20 nut (bottomt) and 1 x M8 nut (top)
+
+==========
+
+build instructions
+Press fit the ball bearings into the bottom and top holes of the platform. Use the M8 screw to join the platform with the tripod mount.
+
+Using the M6 screws, mount the phone's mounting bracket and the laser holder (with the laser inside) on the platform.
+
+You can now screw the assembly on the tripod and plug in the laser as shown in the photo.
