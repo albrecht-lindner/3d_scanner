@@ -14,5 +14,5 @@ The left  image shows the scanning setup mounted on a tripod and the right image
 </table>
 
 <br>
-The scanner rotates 360 degrees around the tripod axis (which coincides with the smartphone camera's optical center). The recorded video can be converted into a full color 3d point cloud:
+A video has to be recorded while the scanner rotates 360 degrees around the tripod axis (which coincides with the smartphone camera's optical center). The recorded video can be converted into a full color 3d point cloud:
 <img src="https://github.com/albrecht-lindner/3d_scanner/blob/master/output/anim3d.gif" width="100%">
