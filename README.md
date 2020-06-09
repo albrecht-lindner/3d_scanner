@@ -21,3 +21,7 @@ A video has to be recorded while the scanner rotates 360 degrees around the trip
 
 The recorded video can then be converted into a full color 3d point cloud:
 <img src="https://github.com/albrecht-lindner/3d_scanner/blob/master/output/anim3d.gif" width="100%">
+
+# Usage
+- Unzip the video file in the ./data folder
+- Run ./software/computePointCloud.m
