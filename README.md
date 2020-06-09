@@ -1,5 +1,6 @@
 # 3d scanner under $40
-This project proposes a 3d scanner under $40. The scanner uses a smartphone and a line laser module to create colored point clouds for distances up to 10m. This repository contains both hardware and software files.
+This project proposes a 3d scanner for distances of up to 10 meters. The scanner uses a smartphone and a line laser module to create colored point clouds. This repository contains hardware and software files.
+<br>
 
 The left  image shows the scanner mounted on a tripod and the right image shows the corresponding video frame captured by the smartphone. The horizontal disparity shift of the laser line visible in the video frame is related to the depth of the scene points.
 
