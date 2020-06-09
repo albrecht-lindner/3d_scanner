@@ -20,7 +20,7 @@ A video has to be recorded while the scanner rotates 360 degrees around the trip
 <img src="https://github.com/albrecht-lindner/3d_scanner/blob/master/data/stitch.jpg" width="100%">
 <br>
 
-The recorded video can then be converted into a full color 3d point cloud:
+The recorded video can then be converted into a full color 3d point cloud.
 <img src="https://github.com/albrecht-lindner/3d_scanner/blob/master/output/anim3d.gif" width="100%">
 
 # Usage
