@@ -1,2 +1,2 @@
 # 3d_scanner
-3d scanner under $50 using any smartphone
+3d scanner under $40 using any smartphone
