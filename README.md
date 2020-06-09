@@ -3,7 +3,7 @@ This project proposes a 3d scanner under $40. The scanner uses a smartphone and 
 
 The left  image shows the scanner mounted on a tripod and the right image shows the corresponding video frame captured by the smartphone. The horizontal disparity shift of the laser line visible in the video frame is related to the depth of the scene points.
 
-<table style="width:100%; margin:0 auto;">
+<table style="width:100%; margin:0 auto; border: 0px;">
     <tr>
       <th>setup</th>
       <th>video frame</th> 
