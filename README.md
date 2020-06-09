@@ -1,7 +1,7 @@
 # 3d_scanner
-This project proposes a 3d scanner under $40. The scanner uses a smartphone and a line laser module to create colored point clouds.
+This project proposes a 3d scanner under $40. The scanner uses a smartphone and a line laser module to create colored point clouds for distances up to 10m.
 
-The left  image shows the scanning setup mounted on a tripod and the right image shows the corresponding video frame captured by the smartphone. The horizontal disparity shift of the laser line in the frame is related to the depth of the scene points.
+The left  image shows the scanner mounted on a tripod and the right image shows the corresponding video frame captured by the smartphone. The horizontal disparity shift of the laser line in the frame is related to the depth of the scene points.
 <table style="width:100%">
     <tr>
       <th>setup</th>
