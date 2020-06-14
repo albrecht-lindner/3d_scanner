@@ -18,7 +18,7 @@ v = VideoReader([seqDIR vidName]);
 % Read the first image from the image set.
 I = readFrame(v);
 
-% Initialize features for I(1)
+% Initialize features for I(1) and preallocate some variables
 grayImage = rgb2gray(I);
 points = detectSURFFeatures(grayImage);
 [features, points] = extractFeatures(grayImage, points);
@@ -27,7 +27,6 @@ warpedImages{1} = warpCylindrical(I, f);
 totx = [];
 toty = [];
 
-% Iterate over video
 pointsPrevious = points;
 featuresPrevious = features;
 IPrevious = I;
@@ -44,6 +43,7 @@ figure(10)
 hold off
 depthx = zeros(H, preallocate); depthy = zeros(H, preallocate); depthZ = zeros(H, preallocate); deptho = zeros(H, preallocate);
 depthX = zeros(H, preallocate); depthY = zeros(H, preallocate); depthidx = zeros(H, preallocate);
+% Iterate over video
 while hasFrame(v)
     loopcount = loopcount + 1;
     I = readFrame(v);
@@ -80,6 +80,7 @@ while hasFrame(v)
     xPrev = matchedPointsPrev.Location(:, 1);
     yPrev = matchedPointsPrev.Location(:, 2);
     
+    % warp image to czlindical coordinates
     [x_, y_] = warpCylindrical(x, y, f, [H W]);
     [xPrev_, yPrev_] = warpCylindrical(xPrev, yPrev, f, [H W]);
     
@@ -90,6 +91,7 @@ while hasFrame(v)
     mx = median(dx(valid));
     figure(10)
     plot(loopcount, mx, 'kx')
+    xlabel('frame number'); ylabel('horizontal shift since last key frame');
     hold on
     deptho(loopcount) = mx + sum(totx);
     
@@ -98,6 +100,7 @@ while hasFrame(v)
         loopcount = loopcount - 1;
         continue
     end
+    % check if new keyframe necessary
     if (mx > 2*pi*f/24) || mod(loopcount, 40) == 0 || ~hasFrame(v)
         n = n + 1;
         
@@ -108,6 +111,7 @@ while hasFrame(v)
         figure(11)
         hold off
         imagesc(cat(2, IPrevious_, I_));
+        title('keyframe pair with correspondences')
         hold on
         for i = 1:length(x_)
             if valid(i)
@@ -127,6 +131,7 @@ depthX = depthX(:, 1:loopcount); depthY = depthY(:, 1:loopcount); depthidx = dep
 depthZ = filterDepth(depthZ, 7, 0.5);
 warpedImages = warpedImages(1:loopcount);
 
+% stitch panorama images for color and depth channels
 WW = round(sum(totx)) + W_;
 panorama = zeros(H_, WW, 3);
 for i = n:-1:1
@@ -136,8 +141,6 @@ for i = n:-1:1
     im = warpedImages{i};
     panorama(top:H_, left:left+W_-1, :) = im(top:H_, :, :);
 end
-
-
 
 WW = round(sum(totx)) + W_;
 panoramaz = zeros(H_, WW);
@@ -153,7 +156,7 @@ for i = 1:loopcount
 end
 panoramaz(isnan(panoramaz)) = 0;
 
-
+% build boint cloud
 xyz = zeros(H, loopcount, 3);
 deptha = deptho/f;
 rgb = zeros(H, loopcount, 3);
