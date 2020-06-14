@@ -1,3 +1,4 @@
 
 data/1920x1080_60fps.mov
 output/pointCloud.ply
+*.asv
