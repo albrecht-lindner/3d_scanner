@@ -24,5 +24,8 @@ The recorded video can then be converted into a full color 3d point cloud.
 <img src="https://github.com/albrecht-lindner/3d_scanner/blob/master/output/anim3d.gif" width="100%">
 
 # Usage
+## Run the example video from this repository
 - Unzip the video file in the ./data folder
 - Run ./software/computePointCloud.m
+## Build your own scanner
+If you have an iPhone 7 you can use the device holder from the ./hardware folder. I you have another phone you need to design your own holder; make sure the optical center of the camera lies on the rotation axis of the platform, this is crucial.
