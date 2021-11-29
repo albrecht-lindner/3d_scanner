@@ -1,5 +1,5 @@
 # 3d scanner under $40
-This project proposes a 3d scanner for distances of up to 10 meters. The scanner uses a smartphone and a line laser module to create colored point clouds. This repository contains hardware and software files.
+This project proposes a 3d scanner for distances of up to roughly 10 meters. The scanner uses a smartphone and a line laser module to create colored point clouds. This repository contains hardware and software files.
 <br>
 
 The left  image shows the scanner mounted on a tripod and the right image shows the corresponding video frame captured by the smartphone. The horizontal disparity shift of the laser line visible in the video frame is related to the depth of the scene points.
@@ -28,4 +28,4 @@ The recorded video can then be converted into a full color 3d point cloud.
 - Unzip the video file in the ./data folder
 - Run ./software/computePointCloud.m
 ## Build your own scanner
-If you have an iPhone 7 you can use the device holder from the ./hardware folder. I you have another phone you need to design your own holder; make sure the optical center of the camera lies on the rotation axis of the platform, this is crucial.
+If you have an iPhone 7 you can use the device holder from the ./hardware folder. If you have another phone you need to design your own holder; make sure the optical center of the camera lies on the rotation axis of the platform, this is crucial.
