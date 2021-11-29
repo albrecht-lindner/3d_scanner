@@ -23,6 +23,9 @@ A video has to be recorded while the scanner rotates 360 degrees around the trip
 The recorded video can then be converted into a full color 3d point cloud.
 <img src="https://github.com/albrecht-lindner/3d_scanner/blob/master/output/anim3d.gif" width="100%">
 
+Below is a reslut from another scene. The picture shows the stiched panorama and the corresponding depth map
+<img src="https://github.com/albrecht-lindner/3d_scanner/blob/master/photo/panorama_depth.bmp" width="100%">
+
 # Usage
 ## Run the example video from this repository
 - Unzip the video file in the ./data folder
